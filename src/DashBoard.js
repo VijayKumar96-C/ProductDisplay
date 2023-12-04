@@ -11,16 +11,7 @@ const DashBoard = () => {
     const [selectedCategory, setSelectedCategory] = useState("")
     const [searchItem, setSearchItem] = useState("")
 
-    useEffect(() => {
-        window.fetch("https://api.cricapi.com/v1/cricScore?apikey=%APIKEY%")
-            .then(result => result.json())
-            .then(result => {
-                console.log("We have the result", result);
-            })
-            .catch(err => {
-                console.log("An error occured. Please check your code", err);
-            });
-    })
+  
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,9 +38,9 @@ const DashBoard = () => {
 
     const handleSearch = (e) => {
         // setSearchItem(e.target.value)
-        setTimeout(()=>{
+        
             setSearchItem(e.target.value)
-        },500)
+       
     }
 
     const handleSelectCategory = (e) => {

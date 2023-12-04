@@ -14,7 +14,6 @@ const ProductCard = (prods) => {
             arr.push(i)
         }
         setStars(arr)
-        console.log("arr", arr)
     }, [])
 
     const handleFavrtClick = () => {
